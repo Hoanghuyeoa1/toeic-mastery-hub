@@ -1,0 +1,236 @@
+Dựa trên hai tài liệu `README.md` và `CHANGELOG.md` của TOEIC Mastery Hub, tôi thấy dự án đã có nền tảng khá đầy đủ về quản lý học tập, từ vựng, chẩn đoán đầu vào, theo dõi điểm số và lộ trình cá nhân hóa.
+
+Tuy nhiên, ứng dụng hiện vẫn thiên về quản lý quá trình ôn TOEIC hơn là một nền tảng luyện thi TOEIC thực chiến từ đầu đến cuối.
+
+Tôi đề xuất phát triển theo ba hướng:
+
+- Mở rộng chức năng: Xây dựng hệ thống luyện đề trực tiếp, chấm bài và chữa lỗi.
+- Nâng cấp chức năng hiện có: Khiến Dashboard, Roadmap, Vocabulary và Mistake Notebook kết nối với nhau thông minh hơn.
+- Tối ưu kỹ thuật: Cải thiện tốc độ, kiến trúc state, lưu trữ dữ liệu và độ ổn định lâu dài.
+
+Dưới đây là các đề xuất tôi ưu tiên dựa trên giá trị thực tế đối với người học, thay vì chỉ thêm thật nhiều chức năng.
+
+## 1. Đề xuất phát triển chức năng mới
+
+## 1. TOEIC Practice Engine — Hệ thống luyện tập Part 1–7
+
+Ưu tiên cao nhất
+
+[Anh ngữ Ms Hoa](https://images.openai.com/static-rsc-4/ykR0LhtH2pGLguWxqUWZPVBn6LyZyRzaAjW3TfOga1HGyZI-ezEspAwRc3okoExoVh3jVdW9sNHH--7vGw0pezjAp-HEi6TYQ_VUBWBOK2gr0mWew741uAw7TfeRIgDEkijqhzjTEiulpDzZp-qUHrNEwdtXXoXfV8o-QH8KHoo?purpose=inline)
+
+[【1500題線上多益題庫】 TOEIC® 新制多益線上題庫與課程平台| BestMyTest 多益](https://images.openai.com/static-rsc-4/wzi5Hobbt_IDH_I0nfrzH7ThdCWoCOYhbpw8eHIMgNAd8LUxCgUWU838sHjT_rzZP-7PGajUcOy6MtDt_8rmscDTdAgnblZTp-nicIcRVbkFNLtNtACZwgqqwdr-yqVaxuVm1ehfnZS-OfAJFJMCiNdJGbz0angWJV-YSaqFSbI?purpose=inline)
+
+[IIG Elearning](https://images.openai.com/static-rsc-4/GcrE0-Yarn9dz5oT1DoGaeQChGNsjfEeXecbdA2p_BWdzpP7F4TIuHQE8DzJcMSkuiwGmLD7VP965You8F33NxFzg-eEbcXIyJMwMYGLq0hQi6z5YIzwsvU5AXddN1K7VgZY4MRHDAvErSa2zmmXwEUNRpet1uDhoz-KbT5MHmY?purpose=inline)
+
+11
+
+Đây là chức năng tôi đánh giá đáng phát triển nhất. Hiện tại dự án có bài Diagnostic 14 câu và hệ thống ghi nhật ký thi, nhưng chưa có một hệ thống luyện tập đầy đủ theo từng Part.
+
+Chức năng đề xuất:
+
+- Luyện riêng Part 1–7, lựa chọn độ khó và số câu.
+- Chế độ Practice không giới hạn thời gian hoặc Timed Practice.
+- Ngân hàng câu hỏi có đáp án, giải thích, transcript, audio và hình ảnh tương ứng.
+- Chấm điểm, xem lại câu sai, lưu kết quả tự động.
+- Liên kết trực tiếp với Mistake Notebook và Dashboard.
+- Thuật toán hạn chế lặp câu, giữ nguyên nhóm câu hỏi chung đoạn hội thoại/bài đọc.
+
+Giá trị: Chuyển ứng dụng từ nơi theo dõi việc học thành nơi trực tiếp thực hành TOEIC.
+
+---- Đang làm
+
+## 2. Full Mock Test — Thi thử TOEIC hoàn chỉnh
+
+Ưu tiên cao
+
+[【1500題線上多益題庫】 TOEIC® 新制多益線上題庫與課程平台| BestMyTest 多益](https://images.openai.com/static-rsc-4/BnpIVmW8XVN_36dxWvvtxd9frYHiKJDE4Ou5Kz7UNcLi99YdDiAIBBzQ9_YFmYZsCQHgTZxjztGCm9Gl6rrryb72hyXkswrIRhN6iNftJX3kdDMc4sxcD8C6XvzkG4osk09r3tsvIYQAjGbKkoaB6U8xHFcZKjGf4kR9k4dCMJs?purpose=inline)
+
+[E-Sınav Sistemi](https://images.openai.com/static-rsc-4/csyJz1hgZxjtBdCZxDWQb1OgOjHujP9scfCHDAp0KwrKo75Zhmzi4EwRjO0x-LyI65ZImazg1vxvFUkef8kqekbB7daDQ5XI86GT-Fux0UFroOQ8LY6SOORg9qsR-HCQZZeFojVGRa4Oe94w4p0Y7LvYEwxZpdrfzb9RREdrq6M?purpose=inline)
+
+[AbceedのTOEICオンライン模試を受けた感想・レビュー - ディクトレENGLISH](https://images.openai.com/static-rsc-4/XOqzdiCg9Ms7rS0I2cNxiCQz_OUaVdvvwNIwSafu25i-WRfwMk0FFWxXHLZBDgfIrd2D1rQ7Gzcv5Mme2RrjKuPbGwoQ_jWglKwi-ia24-0FRvTHCIjFhV6VXQkpdpi4T6WUNCXWFgLQaNjOCLBXycQ_pV15h8I_EA4eQngdo7s?purpose=inline)
+
+10
+
+Phát triển dựa trên Practice Engine và Timer Hub hiện có, cho phép người dùng thực hiện một bài thi hoàn chỉnh.
+
+Đề TOEIC Listening & Reading chính thức có 200 câu: 100 Listening trong 45 phút và 100 Reading trong 75 phút.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ets.org\&sz=32)
+
+ETS
+
+
+
+Chức năng bao gồm giao diện phòng thi, phiếu trả lời 200 câu, điều hướng câu hỏi, đánh dấu câu cần xem lại, lưu bài đang làm để phục hồi khi trình duyệt bị gián đoạn, tự động nộp bài khi hết giờ và báo cáo kết quả theo từng Part.
+
+Nên triển khai Practice Engine trước, Full Mock sau, vì Full Mock phụ thuộc trực tiếp vào chất lượng ngân hàng câu hỏi và hệ thống chấm bài.
+---- Đang làm
+
+## 3. Smart Mistake Review — Hệ thống chữa lỗi sai thông minh
+
+[「GTEC」とGELPで実現する新たな学習体験｜ベネッセコーポレーション](https://images.openai.com/static-rsc-4/wLWVsya131rlRA1ru2Os9wpdxPwm1I6eg82DoDDpnHp5hNWHkO1kf_tY-mEYphU5AlqZpx0D0dgUXFFqBlWSuYw4bK_ImnmzMorLd8VOOKbcfRZPoe0RpqB3KlVFbVzjZOeYe3Ktcwi3RUUQ7eLySEK5BgJ10FknSZN0Bd41zEg?purpose=inline)
+
+Nâng cấp Mistake Notebook từ nơi ghi lỗi thủ công thành hệ thống tự nhận diện và hỗ trợ ôn tập.
+
+Khi làm sai một câu, ứng dụng có thể lưu câu hỏi, đáp án, Part, loại kiến thức, số lần sai và lịch sử ôn lại.
+
+Người học được hướng dẫn xem giải thích, luyện lại câu sai, học từ vựng liên quan và ôn tập những dạng bài còn yếu.
+
+## 4. Adaptive Learning Roadmap — Lộ trình học tự thích nghi
+
+Hiện tại Roadmap sử dụng 3 giai đoạn học tương đối cố định. Có thể nâng cấp thành hệ thống điều chỉnh kế hoạch dựa trên năng lực thực tế.
+
+Ví dụ: Người học đặt mục tiêu 750 TOEIC, còn 60 ngày đến kỳ thi, thường xuyên sai Part 5 và Part 7. Hệ thống sẽ tăng ưu tiên luyện ngữ pháp, đọc hiểu và quản lý thời gian thay vì phân phối bài học đồng đều.
+
+Có thể tự tạo nhiệm vụ theo ngày từ kết quả Practice, Test Log, SRS và thời gian học khả dụng.
+
+## 5. TOEIC Listening Lab — Phòng luyện nghe chuyên sâu
+
+[Audio Transcription Playback with Synced Transcript (Click to Jump) | FluentCap Blog](https://images.openai.com/static-rsc-4/0j-yNnRX-CCKvAy8bha7uNwzsDd-3LCJoHitAL9TSyK3mdrYeSfP5iO1pUufUBpjxny9csduwuRD021D7Mt9Dz5sBkkbywbcr6qxnX1p83IfDiIFuNQIFj8UnGrxtomffHbi5xP-_qgEh7Km_bxKRb4F3LnCQiRJ5rCpe7GImfU?purpose=inline)
+
+Mở rộng từ trình phát TTS đơn giản thành môi trường luyện nghe theo câu và theo đoạn.
+
+Chức năng có thể gồm điều chỉnh tốc độ, nghe lại câu, phát từng đoạn, transcript đồng bộ, luyện nghe chép chính tả, phân tích từ nghe nhầm và luyện Part 2–4.
+
+Nếu vẫn dùng Web Speech API, phải quản lý vòng đời phát âm thanh cẩn thận và có fallback khi giọng đọc không khả dụng.
+
+## 6. Reading Speed Trainer — Luyện tốc độ đọc hiểu
+
+[IELTS Reading Pro — built with AI on Blink](https://images.openai.com/static-rsc-4/Lbr4CWhOMenKknSulkPQoi7yGLSJuU7c-GeVtupQGGOxEuqNCJrGRKcTMfp4X6TGnWqOkI1tBMAiakdvD1dn08FP9gelPgbouIGOBw5pBrGF4aKmrRSVQW0CeRzzHBU3muu5N_EOI4LAIeSUbj6oObTBwWKnX-XhPPL4aw_Ih-A?purpose=inline)
+
+Tập trung vào Part 6–7: luyện đọc email, thông báo, bảng biểu, bài đọc đơn và nhiều văn bản.
+
+Theo dõi thời gian mỗi câu, hỗ trợ xác định thông tin quan trọng, giải thích vị trí bằng chứng và phân tích những nhóm câu khiến người học mất nhiều thời gian.
+
+Đây là tính năng có thể chia sẻ dữ liệu với Practice Engine, tránh xây một hệ thống câu hỏi độc lập.
+
+## 7. Smart Vocabulary Builder — Kho từ vựng theo lỗi sai
+
+Giữ lại SRS Leitner 6 cấp độ hiện có và bổ sung khả năng lấy từ vựng từ các câu hỏi đã làm sai.
+
+Khi người dùng gặp một từ mới trong bài luyện, họ có thể thêm từ vào Vocabulary Vault kèm câu ví dụ, nguồn câu hỏi, chủ đề và Part liên quan. Hệ thống tự phát hiện mục trùng và không làm mất tiến độ SRS.
+
+## 8. PWA Offline — Sử dụng như ứng dụng độc lập
+
+[6 real-life PWA examples you can learn from in 2026 | Progressier](https://images.openai.com/static-rsc-4/j-HBjPCGf65UxeH3PnoTs36bXoLLdgQU_ljENa-_37w99yZH1vvn-Wy_BtUrIwqemrT9OsoFJPwH0TouOMSc4Jc7ufHDOkF_QUtaVaclM3thMqhw9RjYnKnsZMuA_jAMOZQfjSVg0ZXK8SpCOhgVUKEqBCQVNFGnyHfDRzwnvBE?purpose=inline)
+
+Bổ sung khả năng cài ứng dụng từ trình duyệt lên điện thoại hoặc máy tính, hỗ trợ mở và học offline với những tài nguyên đã được lưu.
+
+PWA phù hợp với kiến trúc Offline-First hiện tại. Service Worker và Cache API giúp quản lý tài nguyên offline, nhưng vẫn cần xử lý phiên bản cache và cập nhật ứng dụng an toàn.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://developer.mozilla.org\&sz=32)
+
+MDN
+
++1
+
+
+
+## 2. Đề xuất tối ưu các chức năng hiện có
+
+Các mục dưới đây dựa trực tiếp trên nợ kỹ thuật trong README/CHANGELOG và những rủi ro tôi suy ra từ kiến trúc. Không phải tất cả đều là lỗi đã được xác nhận.
+
+| Hạng mục           | Hướng tối ưu                                                                                    | Ưu tiên |
+| ------------------ | ----------------------------------------------------------------------------------------------- | ------- |
+| AppContext         | Phân tách state hợp lý, selectors, memoization, giảm re-render nhưng giữ nguyên API quan trọng. | P1      |
+| Bundle Performance | Lazy loading, code splitting, chỉ tải biểu đồ và module khi cần.                                | P1      |
+| Score Converter    | Kiểm định thuật toán và phân biệt điểm chính thức với điểm ước tính.                            | P1      |
+| LocalStorage       | Versioning, schema validation, migration, xử lý quota và backup an toàn.                        | P1      |
+| Diagnostic Engine  | Đa dạng hóa bộ câu hỏi, đo độ tin cậy kết quả và phân tích điểm yếu theo Part.                  | P2      |
+| Dashboard          | Phân tích dữ liệu thực, tránh biểu đồ gây hiểu nhầm khi có ít bài thi.                          | P2      |
+| Vocab Vault        | Hoàn thiện CSV, kiểm tra dữ liệu trùng, tối ưu render danh sách lớn.                            | P2      |
+| Timer Hub          | Đồng hồ dựa vào thời gian thực tế, kiểm soát chính xác khi tab bị đưa vào nền.                  | P2      |
+| UI/UX              | Responsive, keyboard shortcuts, accessibility, loading/error states.                            | P2      |
+| Code Quality       | Xử lý 62 warnings, bổ sung unit/integration tests cho các engine cốt lõi.                       | P1      |
+
+CHANGELOG.md
+
+### Có một vấn đề tôi đặc biệt muốn lưu ý: độ chính xác của điểm TOEIC
+
+README mô tả `scoreConverter.ts` có khả năng quy đổi điểm theo chuẩn ETS. Tuy nhiên, ETS không sử dụng một bảng quy đổi raw-to-scaled cố định cho mọi đề thi; điểm chính thức được chuẩn hóa theo độ khó của từng đề bằng phương pháp thống kê.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ets.org\&sz=32)
+
+ETS
+
+
+
+Vì thế, tôi đề xuất kiểm tra và điều chỉnh cách hiển thị như sau: điểm thi người dùng tự khai báo được đánh dấu là kết quả chính thức hoặc kết quả do người dùng nhập; điểm do app tính từ bài luyện cần được ghi là điểm TOEIC ước tính, không khẳng định đó là điểm ETS chính thức. Với Diagnostic 14 câu, càng không nên trình bày kết quả như một phép đo chính xác tuyệt đối.
+
+Đây là việc nên làm sớm để bảo đảm tính đáng tin cậy của ứng dụng.
+
+## 3. Thứ tự phát triển tôi đề xuất
+
+01
+
+Ổn định nền tảng
+
+Score Converter, AppContext, persistence, build và lint
+
+Nên thực hiện sớm
+
+02
+
+Xây dựng Question Bank & Practice Engine
+
+Câu hỏi Part 1–7, luyện tập, chấm bài, lưu kết quả
+
+Giá trị cao nhất
+
+03
+
+Kết nối Mistake Review
+
+Tự động ghi lỗi, chữa bài và đưa từ mới vào SRS
+
+Tận dụng module hiện có
+
+04
+
+Phát triển Full Mock 200 câu
+
+Mô phỏng thi thật dựa trên Practice Engine đã ổn định
+
+Bước mở rộng lớn
+
+05
+
+Cá nhân hóa Roadmap & Analytics
+
+Điều chỉnh lộ trình từ lịch sử làm bài và điểm yếu
+
+Nâng cao trải nghiệm
+
+06
+
+Listening Lab, Reading Trainer & PWA
+
+Mở rộng chiều sâu luyện kỹ năng và hỗ trợ offline
+
+Phát triển dài hạn
+
+Lộ trình trên là thứ tự đề xuất theo phụ thuộc kỹ thuật, không phải số phase bắt buộc để Antigravity Core thực hiện. Việc chia phase cụ thể vẫn thuộc Tab 2.
+
+## 4. Đâu là hướng đáng đầu tư nhất?
+
+Nếu chỉ lựa chọn một chức năng lớn để phát triển tiếp, tôi nghiêng về TOEIC Question Bank + Practice Engine.
+
+Lý do là hiện tại các module như Dashboard, Mistake Notebook, Vocabulary Vault, Roadmap và Test Log đã có nền tảng để nhận dữ liệu học tập, nhưng chưa có đủ hoạt động làm bài trực tiếp để tạo ra nguồn dữ liệu phong phú.
+
+Người dùng luyện đề Part 1–7
+
+Practice Engine chấm bài & ghi nhận kết quả
+
+Mistake Notebook
+
+Vocabulary SRS
+
+Dashboard Analytics
+
+Adaptive Roadmap
+
+Khi hoàn thiện được luồng này, TOEIC Mastery Hub sẽ có một chu trình khép kín: luyện tập → phát hiện lỗi → ôn tập có mục tiêu → theo dõi tiến bộ → điều chỉnh lộ trình.
+
+Điều tôi ưu tiên là hoàn thiện những kết nối đó trước khi thêm quá nhiều tính năng độc lập. Như vậy, mỗi chức năng mới sẽ làm các chức năng cũ trở nên hữu ích hơn, thay vì khiến hệ thống ngày càng phức tạp mà không tăng nhiều giá trị thực tế.
+
+Bạn có thể chọn bất kỳ mục nào ở trên; tôi sẽ chuyển mục đó thành prompt tổng quát hoàn chỉnh cho Tab 1, bao gồm chức năng, kiến trúc, tích hợp, kiểm thử và phòng ngừa regression.
